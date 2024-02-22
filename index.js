@@ -13,11 +13,11 @@ const pool = mysql.createPool({
 });
 
 
-app.delete('/clients/:id', function (req, res) {
-    pool.query("DELETE FROM `clients` WHERE `id`=" + req.params.id, (err, data) => {
+app.delete('/employees/:id', function (req, res) {
+    pool.query("DELETE FROM `employess` WHERE `id`=" + req.params.id, (err, data) => {
         if(err) return  console.log(err);
         res.json( {
-            clients: data
+            employees: data
         });
     });
   });
